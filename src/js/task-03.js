@@ -38,7 +38,3 @@ contsinerEl.classList.add('container')
 
 paragraphEl.after(contsinerEl)
 contsinerEl.append(galleryEl)
-
-
-
-console.log(document);

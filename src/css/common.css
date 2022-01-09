@@ -44,3 +44,7 @@ img {
 .gallery__item + .gallery__item {
   margin-left: 10px;
 }
+
+.reset-btn {
+  margin: 10px 0;
+}

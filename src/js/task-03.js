@@ -13,28 +13,31 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery')
-galleryEl.style.listStyle = "none"
+const galleryEl = document.querySelector('.gallery');
+galleryEl.style.listStyle = 'none';
 
 const addImagesToGallary = images => {
   return images.map(({ url, alt }) => {
-    const itemEl = document.createElement('li')
-    itemEl.classList.add('gallery__item')
-    itemEl.insertAdjacentHTML("beforeend", `<img src="${url}" alt="${alt}" width="auto" height="140px">`)
+    const itemEl = document.createElement('li');
+    itemEl.classList.add('gallery__item');
+    itemEl.insertAdjacentHTML(
+      'beforeend',
+      `<img src="${url}" alt="${alt}" width="auto" height="140px">`,
+    );
 
-    return itemEl
-  })
-}
+    return itemEl;
+  });
+};
 
-const gallaryItemEl = addImagesToGallary(images)
+const gallaryItemEl = addImagesToGallary(images);
 
-galleryEl.append(...gallaryItemEl)
+galleryEl.append(...gallaryItemEl);
 
 // Gallary style
 
-const paragraphEl = document.querySelector('p')
-const contsinerEl = document.createElement('div')
-contsinerEl.classList.add('container')
+const paragraphEl = document.querySelector('p');
+const contsinerEl = document.createElement('div');
+contsinerEl.classList.add('container');
 
-paragraphEl.after(contsinerEl)
-contsinerEl.append(galleryEl)
+paragraphEl.after(contsinerEl);
+contsinerEl.append(galleryEl);

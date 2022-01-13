@@ -19,5 +19,5 @@ function handleSubmit(event) {
 
   console.log(formDataEl);
 
-  return event.currentTarget.reset();
+  event.currentTarget.reset();
 }

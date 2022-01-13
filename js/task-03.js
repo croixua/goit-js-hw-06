@@ -29,9 +29,9 @@ const addImagesToGallary = images => {
   });
 };
 
-const gallaryItemEl = addImagesToGallary(images);
+const gallaryItemsEl = addImagesToGallary(images);
 
-galleryEl.append(...gallaryItemEl);
+galleryEl.append(...gallaryItemsEl);
 
 // Gallary style
 

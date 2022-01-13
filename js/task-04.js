@@ -5,21 +5,14 @@ const value = document.querySelector('#value');
 
 let counterValue = 0;
 
+const decrementValue = () => (value.textContent = counterValue -= 1);
+const incrementValue = () => (value.textContent = counterValue += 1);
+
 btnDecrement.addEventListener('click', decrementValue);
 btnIncrement.addEventListener('click', incrementValue);
 btnReset.addEventListener('click', resetValue);
 
-function decrementValue() {
-  counterValue -= 1;
-  return (value.textContent = counterValue);
-}
-
-function incrementValue() {
-  counterValue += 1;
-  return (value.textContent = counterValue);
-}
-
 function resetValue() {
   counterValue = 0;
-  return (value.textContent = counterValue);
+  value.textContent = counterValue;
 }

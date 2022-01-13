@@ -7,16 +7,17 @@ function handleSubmit(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
-  const formDataEl = {};
 
   if (email.value === '' || password.value === '') {
     return alert('Аллё, господин, заполни поля!');
   }
 
-  formDataEl.email = email.value;
-  formDataEl.password = password.value;
+  const formDataEl = {
+    email: email.value.trim(),
+    password: password.value.trim(),
+  };
 
   console.log(formDataEl);
 
-  return formRef.reset();
+  return event.currentTarget.reset();
 }

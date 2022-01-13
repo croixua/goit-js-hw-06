@@ -7,4 +7,5 @@ function sizeText(event) {
   const currentFontSize = event.currentTarget.value;
 
   textRef.style.fontSize = `${currentFontSize}px`;
+  textRef.style.transition = '250ms linear';
 }

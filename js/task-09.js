@@ -1,12 +1,13 @@
 const changeColorBtnRef = document.querySelector('.change-color');
 const colorTextValueRef = document.querySelector('.color');
-const bodyRef = document.querySelector('body');
+// const bodyRef = document.querySelector('body');
 
 changeColorBtnRef.addEventListener('click', changeColor);
 
 function changeColor() {
   const color = getRandomHexColor();
-  bodyRef.style.backgroundColor = `${color}`;
+  document.body.style.backgroundColor = `${color}`;
+  document.body.style.transition = '250ms linear';
   colorTextValueRef.textContent = `${color}`;
 }
 

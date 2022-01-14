@@ -9,5 +9,6 @@ function blurInput(event) {
     inputRef.classList.remove('invalid');
     return inputRef.classList.add('valid');
   }
+  inputRef.classList.remove('valid');
   inputRef.classList.add('invalid');
 }

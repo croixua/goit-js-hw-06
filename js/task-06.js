@@ -7,6 +7,7 @@ function blurInput(event) {
   const length = Number(inputSymbolsLength.dataset.length);
   if (length === event.currentTarget.value.length) {
     inputRef.classList.remove('invalid');
+
     return inputRef.classList.add('valid');
   }
   inputRef.classList.remove('valid');

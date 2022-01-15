@@ -4,12 +4,15 @@ const destroyBtn = document.querySelector('[data-destroy]');
 const boxesRef = document.querySelector('#boxes');
 const inputRef = controlsRef.firstElementChild;
 
-createBtn.addEventListener('click', createBoxes);
+createBtn.addEventListener('click', onInputValue);
 destroyBtn.addEventListener('click', destroyBoxes);
 
-function createBoxes(amount) {
+function onInputValue() {
   amount = inputRef.value;
+  createBoxes(amount);
+}
 
+function createBoxes(amount) {
   const boxes = [];
 
   for (let i = 0; i < amount; i++) {
@@ -26,7 +29,6 @@ function createBoxes(amount) {
   }
 
   boxesRef.append(...boxes);
-  amount = '';
 }
 
 function destroyBoxes() {
